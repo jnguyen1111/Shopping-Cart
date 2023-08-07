@@ -9,6 +9,7 @@ import { ShoppingCartProvider } from './context/ShoppingCartContext'
 //handles routes and components
 function App() {
   return(
+    //provides data/context to other components nested within it
     <ShoppingCartProvider>
       <Navbar />
       <Container className='mb-4'>

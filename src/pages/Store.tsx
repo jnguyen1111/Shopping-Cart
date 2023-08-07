@@ -2,6 +2,7 @@ import { Col, Row } from "react-bootstrap"
 import { StoreItem } from "../components/StoreItem"
 import storeItems from "../data/items.json"
 
+//functionpass item from store item properties into the component of store item tag and renders accordingly
 export function Store() {
   return (
     <>

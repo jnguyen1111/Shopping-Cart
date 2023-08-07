@@ -9,6 +9,7 @@ type StoreItemProps = {
   imgUrl: string
 }
 
+//displays items on the store page and gives option to interact with it
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
   const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart()
   const quantity = getItemQuantity(id)

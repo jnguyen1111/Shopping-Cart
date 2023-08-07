@@ -22,14 +22,18 @@ type ShoppingCartContext = {
   cartItems: CartItem[]
 }
 
+// the actual object which the provider and worker components in the app can use
 const ShoppingCartContext = createContext({} as ShoppingCartContext)
 
+// function call in which if the component has access can use the shopping car context
 export function useShoppingCart() {
     return useContext(ShoppingCartContext)
 }
 
+//controls state of the shopping cart
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [isOpen, setIsOpen] = useState(false) 
+  // remembers the list/ones cart of items sessions
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
     "shopping-cart",
     []

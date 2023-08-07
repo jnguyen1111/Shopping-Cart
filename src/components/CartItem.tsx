@@ -7,7 +7,7 @@ type CartItemProps = {
   id: number
   quantity: number
 }
-
+//displays the items in cart and formats it
 export function CartItem({ id, quantity }: CartItemProps) {
   const { removeFromCart } = useShoppingCart()
   const item = storeItems.find(i => i.id === id)
